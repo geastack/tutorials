@@ -1,0 +1,13 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "geatsc",
+    "start": "./dist/hello-world"
+  },
+  "dependencies": {
+    "@geastack/compiler": "^1.0.15"
+  }
+}

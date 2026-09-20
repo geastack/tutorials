@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter-Regular.ttf');
+}
+
+.screen { display: flex; flex-direction: column; width: 100vw; height: 100vh; padding: 30px; gap: 20px; align-items: center; justify-content: center; background-color: #071018; color: #f8fafc; font-family: 'Inter'; }
+.eyebrow { color: #38bdf8; font-size: 14px; }
+.message { color: #ffffff; font-size: 30px; text-align: center; }
+.status { color: #94a3b8; font-size: 15px; text-align: center; }

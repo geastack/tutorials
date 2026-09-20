@@ -1,0 +1,32 @@
+{
+  "name": "geastack-embedded-component-counter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gea": "gea",
+    "check": "tsc --noEmit",
+    "build": "gea build --board amoled",
+    "flash": "gea flash --board amoled",
+    "flash:monitor": "gea flash --board amoled --monitor"
+  },
+  "dependencies": {
+    "@geastack/cli": "^0.1.78",
+    "@geastack/core": "^0.1.23",
+    "@geastack/targets": "^0.1.77"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  },
+  "gea": {
+    "id": "component-counter",
+    "name": "Component Counter",
+    "entry": "src/index.tsx",
+    "targets": {
+      "esp32": true
+    },
+    "ota": {
+      "ble": true
+    }
+  }
+}

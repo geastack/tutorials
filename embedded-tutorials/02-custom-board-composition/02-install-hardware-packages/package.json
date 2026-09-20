@@ -1,0 +1,30 @@
+{
+  "name": "manual-amoled-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@geastack/chips": "^0.1.3",
+    "@geastack/cli": "^0.1.78",
+    "@geastack/compiler": "^1.0.15",
+    "@geastack/core": "^0.1.23",
+    "@geastack/targets": "^0.1.77"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  },
+  "gea": {
+    "id": "manual-amoled-app",
+    "name": "Manual AMOLED App",
+    "entry": "src/index.tsx",
+    "targets": {
+      "esp32": true
+    },
+    "ota": {
+      "ble": true
+    }
+  }
+}

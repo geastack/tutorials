@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./fonts/BebasNeue-Regular.ttf');
+}
+
+/* The panel is 410x502 physical pixels at a 1.5 device pixel ratio, so this
+   stylesheet lays out against a 273x334 CSS viewport. */
+.screen {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  overflow: hidden;
+  background-color: #08080a;
+  color: #fafafa;
+  font-family: 'Inter';
+}
+
+.count {
+  width: 100%;
+  color: #fafafa;
+  font-family: 'Bebas Neue';
+  font-size: 140px;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  gap: 26px;
+}
+
+.button {
+  display: flex;
+  width: 78px;
+  height: 78px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 39px;
+  border-width: 1px;
+  font-family: 'Bebas Neue';
+  font-size: 40px;
+  text-align: center;
+}
+
+.secondary {
+  color: #d4d4d8;
+  background-color: #141417;
+  border-color: #35353c;
+}
+
+.primary {
+  color: #1a0803;
+  background-color: #ff5a36;
+  border-color: #ff7a5c;
+}

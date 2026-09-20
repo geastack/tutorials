@@ -1,0 +1,31 @@
+{
+  "name": "geastack-embedded-store-counter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "gea": "gea",
+    "check": "tsc --noEmit",
+    "build": "gea build --board amoled",
+    "flash": "gea flash --board amoled"
+  },
+  "dependencies": {
+    "@geastack/cli": "^0.1.78",
+    "@geastack/core": "^0.1.23",
+    "@geastack/targets": "^0.1.77"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  },
+  "gea": {
+    "id": "store-counter",
+    "name": "Store Counter",
+    "entry": "src/index.tsx",
+    "targets": {
+      "esp32": true
+    },
+    "ota": {
+      "ble": true
+    }
+  }
+}

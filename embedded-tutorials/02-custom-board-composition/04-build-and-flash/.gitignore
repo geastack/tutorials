@@ -1,0 +1,4 @@
+node_modules/
+dist/
+.gea/build/
+.env

@@ -1,0 +1,7 @@
+{
+  "manual-amoled": {
+    "target": "manual-amoled",
+    "targetDefinition": "targets/manual-amoled.json",
+    "appPlatform": "esp32"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "manual-amoled": {
+    "target": "manual-amoled",
+    "targetDefinition": "targets/manual-amoled.json",
+    "appPlatform": "esp32",
+    "transports": {
+      "ota": {
+        "host": "192.168.1.100"
+      }
+    }
+  }
+}
