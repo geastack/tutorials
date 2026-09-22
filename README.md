@@ -1,6 +1,6 @@
 # GeaStack tutorials
 
-Step-by-step courses that build real GeaStack applications — from a first
+Step-by-step courses that build GeaStack applications — from a first
 "hello" to a native HTTP server and a custom ESP32-S3 board.
 
 Every tutorial is a named folder whose numbered subfolders are its progressive
@@ -19,7 +19,7 @@ Compile Node and server applications into native executables.
 
 ### [Embedded](./embedded-tutorials/README.md)
 
-Build, flash and update a Gea app on real hardware.
+Build, flash and update a Gea app on hardware.
 
 1. [Build an ESP32-S3 AMOLED app](./embedded-tutorials/01-esp32-s3-amoled-app/README.md)
    — create a touchscreen counter, extract its state into a store, install the
@@ -40,8 +40,7 @@ working through it builds with the same one.
 
 ## License
 
-MIT (see `LICENSE`). Use it, change it, ship closed-source products on it, no
-strings attached. The only GeaStack code under a different license is the
+MIT (see `LICENSE`). You can ship closed-source products built on it. The only GeaStack code under a different license is the
 embedded board support (`targets` and `@geastack/chips`, GPL-3.0-only):
 shipping closed-source firmware through those needs a commercial license.
 Contact [contact@geastack.com](mailto:contact@geastack.com) for commercial terms, support and hosted builds.

@@ -27,5 +27,5 @@ npm run build
 npm start
 ```
 
-See the [Node tutorials index](../README.md) for npm authentication and global
-compiler installation.
+See the [Node tutorials index](../README.md) for installing the compiler
+globally.

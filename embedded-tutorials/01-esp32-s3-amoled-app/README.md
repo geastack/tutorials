@@ -17,5 +17,4 @@ blank starter.
 4. [`04-network-request`](./04-network-request/README.md): new project. Connect
    the board to Wi-Fi and fetch live data.
 
-See the [embedded tutorials index](../README.md) for npm authentication and CLI
-installation.
+See the [embedded tutorials index](../README.md) for CLI installation.

@@ -26,8 +26,7 @@ installs.
 
 The composable base is the generic `esp32-s3` platform. It supplies ESP-IDF,
 the Gea runtime, partitions, build integration, and OTA plumbing. The app-local
-definition supplies the actual peripherals and pin map. Unsupported controllers
+definition supplies the peripherals and pin map. Unsupported controllers
 fail during configuration with a direct error.
 
-See the [embedded tutorials index](../README.md) for npm authentication and the
-guided alternative.
+See the [embedded tutorials index](../README.md) for the guided alternative.

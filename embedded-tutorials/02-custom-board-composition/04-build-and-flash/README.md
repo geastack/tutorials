@@ -1,6 +1,6 @@
 # 04 — Build and flash the composed target
 
-There are three separate concepts:
+There are four separate concepts:
 
 | Concept | Where it lives | What it controls |
 | --- | --- | --- |
