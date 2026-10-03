@@ -8,6 +8,6 @@
     "start": "./dist/hello-world"
   },
   "dependencies": {
-    "@geastack/compiler": "^1.0.15"
+    "@geastack/compiler": "^1.0.21"
   }
 }

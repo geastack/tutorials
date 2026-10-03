@@ -10,12 +10,12 @@
     "flash": "gea flash --board amoled"
   },
   "dependencies": {
-    "@geastack/cli": "^0.1.78",
-    "@geastack/core": "^0.1.23",
-    "@geastack/targets": "^0.1.77"
+    "@geastack/cli": "^0.1.94",
+    "@geastack/core": "^0.1.35",
+    "@geastack/targets": "^0.1.92"
   },
   "devDependencies": {
-    "typescript": "latest"
+    "typescript": "^5.9.3"
   },
   "gea": {
     "id": "network-request",

@@ -7,10 +7,10 @@
     "check": "tsc --noEmit"
   },
   "dependencies": {
-    "@geastack/core": "^0.1.23"
+    "@geastack/core": "^0.1.35"
   },
   "devDependencies": {
-    "typescript": "latest"
+    "typescript": "^5.9.3"
   },
   "gea": {
     "id": "manual-amoled-app",
