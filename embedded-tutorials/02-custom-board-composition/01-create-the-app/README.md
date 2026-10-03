@@ -14,7 +14,7 @@ Install the application runtime and TypeScript directly:
 
 ```sh
 npm install @geastack/core
-npm install --save-dev typescript
+npm install --save-dev 'typescript@^5.9.3'
 ```
 
 Add the `check` script and `gea` application manifest shown in
