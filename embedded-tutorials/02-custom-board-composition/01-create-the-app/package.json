@@ -7,7 +7,7 @@
     "check": "tsc --noEmit"
   },
   "dependencies": {
-    "@geastack/core": "^0.1.37"
+    "@geastack/core": "^0.1.53"
   },
   "devDependencies": {
     "typescript": "^5.9.3"

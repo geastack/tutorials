@@ -51,11 +51,18 @@ export class App extends ReactiveComponent {
 }
 ```
 
-Add a style for the new button at the end of `src/styles.css`, and change the
-accent colour if you want to see at a glance that the new build is running:
+Add a style for the new button at the end of `src/styles.css`:
 
 ```css
 .reset { display: flex; align-items: center; justify-content: center; width: 120px; height: 40px; border-radius: 10px; color: #cbd5e1; background-color: #111827; border-color: #334155; }
+```
+
+To see at a glance that the new build is running, change the accent colour
+from teal to violet. Replace the `.eyebrow` and `.primary` rules with:
+
+```css
+.eyebrow { color: #a78bfa; font-size: 13px; }
+.primary { color: #1e1b4b; background-color: #a78bfa; border-color: #c4b5fd; }
 ```
 
 ## 3. Check, build and flash

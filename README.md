@@ -30,9 +30,15 @@ Build, flash and update a Gea app on hardware.
 
 ## What you need
 
-Node.js 22 or newer and npm. The embedded path also needs an ESP32-S3 board.
-`npx gea doctor` checks the toolchains for whichever target you pick and names
-anything that is missing.
+Node.js 22.15 or newer and npm.
+
+The Node path also needs a C++ compiler: `geatsc` builds the generated program
+with `$CXX`, or `clang++` when `CXX` is unset (Xcode Command Line Tools on
+macOS, the `clang` package on Linux).
+
+The embedded path needs an ESP32-S3 board. Inside an embedded project,
+`npx gea doctor` checks the board toolchains and names anything that is
+missing.
 
 Each tutorial installs the compiler into its own project snapshot, so the
 compiler version is recorded in that step's `package.json` and everyone

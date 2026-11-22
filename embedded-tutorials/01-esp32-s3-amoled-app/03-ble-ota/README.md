@@ -2,7 +2,7 @@
 
 Lesson 03 stays in the `component-counter` project. The counter was created
 with Bluetooth updates enabled, and the USB flash in lesson 01 put the BLE OTA
-service on the board. Now you change two lines and install the new build over
+service on the board. Now you change three lines and install the new build over
 Bluetooth with no USB data connection.
 
 ## 1. Check that BLE updates are on
@@ -24,10 +24,14 @@ does not need Bluetooth, and the BLE stack stays out of the firmware.
 ## 2. Change the app
 
 Make the new build easy to recognise. In `src/counter-store.ts` start the
-counter at 100:
+counter at 100, and make `reset()` return to 100 as well:
 
 ```ts
   count = 100
+```
+
+```ts
+  reset() { this.count = 100 }
 ```
 
 In `src/App.tsx` change the title line:
@@ -47,9 +51,10 @@ From a Mac with Bluetooth on:
 
 ```sh
 npm run check
-gea build
 gea ota
 ```
+
+`gea ota` builds the firmware first, so no separate `gea build` is needed.
 
 Because Bluetooth updates were enabled when the project was created, `gea ota`
 uses BLE without any extra flag. The CLI finds the nearby **Geastack OTA**

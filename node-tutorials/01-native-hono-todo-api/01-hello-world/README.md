@@ -5,6 +5,11 @@ In this lesson you will create a Node project from an empty directory, install
 
 The [`01-hello-world`](.) directory is the completed project for reference.
 
+You need Node.js 22.15 or newer and a C++ compiler. `geatsc` builds the
+generated program with `$CXX`, or `clang++` when `CXX` is unset: install the
+Xcode Command Line Tools on macOS (`xcode-select --install`) or the `clang`
+package on Linux, then check with `clang++ --version`.
+
 ## 1. Create the project
 
 ```sh
@@ -18,13 +23,13 @@ You now have a `package.json` describing an otherwise empty Node project.
 
 ## 2. Install geatsc
 
-Add the compiler as a development dependency:
+Add the compiler to the project:
 
 ```sh
-npm install --save-dev @geastack/compiler
+npm install @geastack/compiler
 ```
 
-This adds `@geastack/compiler` to `devDependencies` and creates a lockfile. Add
+This adds `@geastack/compiler` to `dependencies` and creates a lockfile. Add
 commands for building and running the program:
 
 ```sh

@@ -24,6 +24,21 @@
   font-family: 'Inter';
 }
 
+.readout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 6px;
+}
+
+.accent {
+  width: 44px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #ff5a36;
+}
+
 .count {
   width: 100%;
   color: #fafafa;

@@ -18,7 +18,7 @@ Each numbered folder is a complete snapshot at the end of that step:
    target and install it over USB, then use BLE OTA for later updates.
 
 `@geastack/chips` is one npm package. npm downloads its complete reusable
-driver catalog; the package currently weighs about 8 KB compressed and 35 KB
+driver catalog; at version 0.1.8 that is about 30 KB compressed and 120 KB
 unpacked. A selected target compiles only the drivers that board uses into the
 firmware. npm cannot install one directory or subpath from a package, so
 commands such as `npm install @geastack/chips/co5300` are not valid package

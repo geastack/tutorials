@@ -7,12 +7,17 @@ The [`04-hono-server`](.) directory is the completed project for reference.
 
 ## 1. Install Hono
 
-Install Hono and its official Node server adapter:
+Install Hono and its official Node server adapter, at the versions this
+tutorial is built and tested with:
 
 ```sh
-npm install hono @hono/node-server
+npm install --save-exact hono@4.12.34 @hono/node-server@2.1.1
 npm install --save-dev @types/node
 ```
+
+The compiler builds the libraries from their TypeScript source, so pin them:
+newer Hono releases can use constructs this compiler release does not yet
+compile.
 
 Rename the package and update the executable used by `npm start`:
 

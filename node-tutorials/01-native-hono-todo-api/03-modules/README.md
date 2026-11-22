@@ -47,3 +47,5 @@ The program prints:
 2 + 3 = 5
 4 × 5 = 20
 ```
+
+Continue with [`04-hono-server`](../04-hono-server/README.md).

@@ -13,9 +13,16 @@ From the lesson 05 project, install the official Node.js driver:
 npm install mongodb bson
 ```
 
-`bson` is pinned because the native MongoDB implementation compiles its
-version-matched TypeScript source. Application code continues to import the
-public `mongodb` package.
+`bson` is a direct dependency because the native MongoDB implementation
+compiles BSON's TypeScript source together with the driver's. Application code
+continues to import the public `mongodb` package.
+
+The finished project has its own name, so its executable is
+`dist/hono-mongodb-app`. Rename yours to match:
+
+```sh
+npm pkg set name=hono-mongodb-app scripts.start=./dist/hono-mongodb-app
+```
 
 ## 2. Start MongoDB
 
@@ -115,9 +122,9 @@ return json(
 )
 ```
 
-With `@geastack/compiler@1.0.4`, this explicit `Document` shape is required:
-the compiler does not yet convert a closed object literal to BSON's
-string-indexed `Document` representation automatically. Keeping `id` in a
+The explicit `Document` shape puts the literal straight into BSON's
+string-indexed `Document` representation instead of relying on the compiler to
+convert a closed object literal at the insert boundary. Keeping `id` in a
 typed local also ensures `ObjectId` methods use their native receiver after a
 document has crossed the BSON dictionary boundary.
 

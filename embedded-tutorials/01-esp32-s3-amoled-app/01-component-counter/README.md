@@ -1,6 +1,6 @@
 # 01 — Component counter
 
-In this lesson you create a Geastack project with the CLI, look at the three
+In this lesson you create a GeaStack project with the CLI, look at the three
 files it generates, register your board and flash a touchscreen counter over
 USB.
 
@@ -14,7 +14,7 @@ gea create component-counter
 The CLI asks what you want to build and shows two options:
 
 1. **Blank application**: an empty screen. Lesson 04 uses this one.
-2. **Example application**: a complete app from the Geastack example gallery.
+2. **Example application**: a complete app from the GeaStack example gallery.
 
 Choose **2**. The gallery opens with **1, Component Counter** as its first
 entry, so choose **1** there. The CLI writes the project, picks ESP32 as the
@@ -116,7 +116,7 @@ The wizard asks a few questions. Answer them like this:
 
 1. **What do you want to set up?** Choose **1, Known supported board**.
 2. **Which board do you have?** Pick your board from the list. It shows every
-   board Geastack can flash, with the chip and display next to each name.
+   board GeaStack can flash, with the chip and display next to each name.
 3. **Board alias.** Press Enter to accept `amoled`. The alias is how you name
    the board when more than one is registered.
 4. **Is the board connected over USB right now?** Answer `y`. The CLI finds the

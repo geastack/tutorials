@@ -14,7 +14,10 @@ Answer the wizard like this:
 
 1. **What do you want to build?** Choose **1, Blank application**.
 2. **Where should this application run?** Choose **2, ESP32 board**.
-3. **Enable wireless firmware updates over Bluetooth?** Answer `n`.
+3. **Enable wireless firmware updates over Bluetooth?** Press Enter to keep
+   the default, `yes`. The finished project in this folder has `"ota": { "ble":
+   true }` in its `package.json`, so later builds can also go out with
+   `gea ota` as in lesson 03.
 
 The CLI writes `src/index.tsx`, `src/styles.css`, the Inter font under
 `assets/fonts/`, a `tsconfig.json`, a `.gitignore` and installs the
@@ -26,7 +29,7 @@ cd network-request
 
 ## 2. Write the app
 
-`src/network-store.ts` owns the Wi-Fi state and the request. Waiting for
+Create `src/network-store.ts`. It owns the Wi-Fi state and the request. Waiting for
 `WiFi.connected()` before calling `fetch` is required on the embedded target:
 
 ```ts
@@ -72,7 +75,7 @@ class NetworkStore extends Store {
 export const network = new NetworkStore()
 ```
 
-`src/App.tsx` only shows the store fields:
+Create `src/App.tsx`. It only shows the store fields:
 
 ```tsx
 import { ReactiveComponent } from '@geastack/core'
@@ -92,7 +95,8 @@ export class App extends ReactiveComponent {
 }
 ```
 
-Replace `src/index.tsx`. `Display.setFlushConfig` reserves enough internal RAM
+Replace `src/index.tsx`, which held the blank starter's whole app, with the
+version below. `Display.setFlushConfig` reserves enough internal RAM
 for the ESP32 Wi-Fi driver on this display, and the animation frame loop polls
 the store until the network is up:
 
@@ -137,12 +141,19 @@ GEA_WIFI_PASSWORD=Your Wi-Fi password
 ```
 
 The build inlines these two values into the firmware. `.env` is already in the
-generated `.gitignore`, so it stays out of Git.
+generated `.gitignore`, so it stays out of Git. The finished project in this
+folder ships the same two lines as `.env.example`; to build that folder
+directly, copy it to `.env` and fill in your network.
 
 ## 4. Register the board and flash
 
-Board aliases live per project, so run the wizard again with the same answers
-as in lesson 01: known board, default alias, connected over USB, no OTA host.
+Lesson 01 saved the alias in that project's `.gea/boards.json`. Every project
+`gea create` makes has its own `.gea/boards.json`, and the wizard writes there,
+so this new project does not know the board yet. Run the wizard again with the
+same answers as in lesson 01: known board, default alias, connected over USB,
+no OTA host. (An alias saved with `gea setup --global` goes to
+`~/.geastack/boards.json` instead, which every project on the machine reads;
+`gea boards list` shows each alias and the file it lives in.)
 
 ```sh
 gea setup
