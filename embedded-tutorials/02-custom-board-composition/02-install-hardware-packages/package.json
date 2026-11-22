@@ -8,10 +8,10 @@
   },
   "dependencies": {
     "@geastack/chips": "^0.1.8",
-    "@geastack/cli": "^0.1.116",
+    "@geastack/cli": "^0.1.117",
     "@geastack/compiler": "^1.0.49",
     "@geastack/core": "^0.1.53",
-    "@geastack/targets": "^0.1.113"
+    "@geastack/targets": "^0.1.116"
   },
   "devDependencies": {
     "typescript": "^5.9.3"

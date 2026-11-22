@@ -11,9 +11,9 @@
     "flash:monitor": "gea flash --board amoled --monitor"
   },
   "dependencies": {
-    "@geastack/cli": "^0.1.116",
+    "@geastack/cli": "^0.1.117",
     "@geastack/core": "^0.1.53",
-    "@geastack/targets": "^0.1.113"
+    "@geastack/targets": "^0.1.116"
   },
   "devDependencies": {
     "typescript": "^5.9.3"
