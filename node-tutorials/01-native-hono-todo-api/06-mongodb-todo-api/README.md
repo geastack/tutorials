@@ -10,12 +10,33 @@ The [`06-mongodb-todo-api`](.) directory is the completed project for reference.
 From the lesson 05 project, install the official Node.js driver:
 
 ```sh
-npm install mongodb bson
+npm install --save-exact mongodb@7.1.1 bson@7.3.3
 ```
 
-`bson` is a direct dependency because the native MongoDB implementation
+The versions are exact because they are the ones this lesson is verified to
+compile natively. `bson` is a direct dependency because the native MongoDB implementation
 compiles BSON's TypeScript source together with the driver's. Application code
 continues to import the public `mongodb` package.
+
+The driver's source also imports the types of its optional peers -- Kerberos
+authentication, client-side encryption and the GCP metadata client. Install
+them as development dependencies so the compiler can read those types:
+
+```sh
+npm install --save-dev --save-exact kerberos@7.0.0 mongodb-client-encryption@7.0.0 gcp-metadata@7.0.1
+```
+
+They stay out of the executable. A development dependency is installed for its
+types only, so the binary answers the driver's guarded `require` of one the way a
+production install (`npm install --omit=dev`) does: the module is not found, and
+the driver carries on without that feature.
+
+The driver's wire compression imports `node:zlib`, so the executable links the
+system's zlib, brotli decoder and zstd. Install them once: `brew install brotli zstd`
+on macOS, `sudo apt install zlib1g-dev libbrotli-dev libzstd-dev` on Debian/Ubuntu (an updated
+Ubuntu 24.04 package carries the brotli security fix the build checks for). On
+a system whose brotli lacks that fix, the build says so; the node-compat
+README's `BROTLI_DIR` recipe covers that case.
 
 The finished project has its own name, so its executable is
 `dist/hono-mongodb-app`. Rename yours to match:
